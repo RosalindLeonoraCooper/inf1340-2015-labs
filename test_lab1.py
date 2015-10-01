@@ -8,7 +8,7 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 import mock
-from lab1_solution import vowel_or_consonant
+from lab1 import vowel_or_consonant
 
 
 def test_vowel_or_consonant(capsys):
@@ -18,7 +18,7 @@ def test_vowel_or_consonant(capsys):
         with mock.patch("__builtin__.raw_input", return_value=letter):
             vowel_or_consonant()
             (out, err) = capsys.readouterr()
-            assert out == "vowel\n"
+            assert out == "vowdel\n"
 
     with mock.patch("__builtin__.raw_input", return_value="y"):
         vowel_or_consonant()
@@ -31,3 +31,4 @@ def test_vowel_or_consonant(capsys):
             vowel_or_consonant()
             (out, err) = capsys.readouterr()
             assert out == "consonant\n"
+
